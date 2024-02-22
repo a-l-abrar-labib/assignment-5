@@ -57,7 +57,6 @@ function addItemToSeatListView(seatNumber, price) {
 
   document.getElementById("total-price").innerText = `BDT ${totalBill}`;
 
-  // console.log(totalBill);
 }
 function removeItemFromSeatListView(seatNumber, price) {
   document.querySelector(`#seat-no-${seatNumber}`).remove();
@@ -84,8 +83,6 @@ couponApplyBtn.addEventListener("click", function () {
   // parse number with regex
   const numberPattern = /\d+/g;
   let discountPercentage = inputValue.match(numberPattern).join('');
-  console.log('percentage', discountPercentage)
-  // discountPercentage = parseInt(discountPercentage);
 
   // // 2. calculate the percentage
   // // Ex: => 20%
