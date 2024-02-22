@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- manrope google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Manrope", sans-serif;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      .seat-selector-btn.selected {
+        background-color: #22c55e;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body class="">
+    <!-- nav -->
+    <section class="container mx-auto mt-8">
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Destination</a></li>
+              <li><a>Search</a></li>
+            </ul>
+          </div>
+          <a class="text-xl font-extrabold"
+            >Travel <span class="text-green-500">Trackers</span></a
+          >
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1 font-bold">
+            <li><a class="text-green-500">Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Destination</a></li>
+            <li><a>Search</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a
+            class="btn px-6 py-4 bg-green-100 text-green-500 font-bold pb-9 border border-green-300"
+            >Bus<span><img src="images/bus-icon.png" alt="" /></span
+          ></a>
+        </div>
+      </div>
+    </section>
+    <!-- nav end -->
+    <!-- banner -->
+    <section
+      class="container mx-auto mt-8 flex flex-col items-center justify-center"
+    >
+      <div
+        class="bg-no-repeat max-w-5xl bg-contain w-full aspect-[6/3]"
+        style="background-image: url(images/banner.png)"
+      >
+        <div class="text-center mt-24">
+          <h1 class="font-bold text-4xl text-white">
+            End-to-End Travel With<br /><span
+              class="text-green-500 font-bold text-6xl"
+              >Trackers Paribahan</span
+            >
+          </h1>
+          <p class="my-10 text-white">
+            Seamless Bus Booking Experience Awaits! <br />Start Your Journey
+            Today with Travel Trackers
+          </p>
+          <a
+            href="#booking-form"
+            class="btn px-6 py-4 bg-green-400 text-black font-bold border-none"
+            >Buy Tickets</a
+          >
+        </div>
+      </div>
+      <div class="flex gap-8 text-center -mt-20">
+        <div
+          class="flex bg-slate-50 rounded-2xl border-b-2 border-green-500 w-56 h-24 justify-center items-center"
+        >
+          <img src="images/people.png" alt="" class="pr-3" />
+          <div>
+            <h2 class="font-bold text-3xl">500K+</h2>
+            <p class="font-medium">Registered users</p>
+          </div>
+        </div>
+        <div
+          class="flex bg-slate-50 rounded-2xl border-b-2 border-green-500 w-56 h-24 justify-center items-center"
+        >
+          <img src="images/ticket-cupon.png" alt="" class="pr-3" />
+          <div>
+            <h2 class="font-bold text-3xl">1.7 lacks</h2>
+            <p class="font-medium">Tickets sold</p>
+          </div>
+        </div>
+        <div
+          class="flex bg-slate-50 rounded-2xl border-b-2 border-green-500 w-56 h-24 justify-center items-center"
+        >
+          <img src="images/stoppage.png" alt="" class="pr-3" />
+          <div>
+            <h2 class="font-bold text-3xl">80K+</h2>
+            <p class="font-medium">Rental partners</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- banner end -->
+    <!-- coupon -->
+    <section class="container mx-auto mt-8 text-center">
+      <h2 class="font-bold text-3xl">Best offers for you</h2>
+      <div class="flex gap-20 justify-center">
+        <!-- coupon 1 -->
+        <div
+          class="bg-amber-400 rounded-2xl flex justify-evenly w-1/3 h-40 items-center my-20"
+        >
+          <div>
+            <h3 class="font-extrabold text-3xl text-left">15% OFF</h3>
+            <p class="font-semibold text-xl">on your next purchase</p>
+            <p class="opacity-75 font-medium text-left">use by March 2024</p>
+          </div>
+          <div>
+            <img src="images/cupon-devider.png" alt="" class="h-40 pl-6" />
+          </div>
+          <div>
+            <h3 class="font-bold text-3xl">NEW 15</h3>
+            <p class="opacity-75 font-medium text-left">Coupon Code</p>
+          </div>
+        </div>
+        <!-- coupon 2 -->
+        <div
+          class="bg-red-300 rounded-2xl flex justify-evenly w-1/3 h-40 items-center my-20"
+        >
+          <div>
+            <h3 class="font-extrabold text-3xl text-left">20% OFF</h3>
+            <p class="font-semibold text-xl">on your next purchase</p>
+            <p class="opacity-75 font-medium text-left">use by March 2024</p>
+          </div>
+          <div>
+            <img src="images/cupon-devider.png" alt="" class="h-40 pl-6" />
+          </div>
+          <div>
+            <h3 class="font-bold text-3xl">Couple 20</h3>
+            <p class="opacity-75 font-medium text-left">Coupon Code</p>
+          </div>
+        </div>
+      </div>
+      <a
+        class="btn px-6 py-4 bg-white text-green-500 font-bold border border-green-300"
+        >See All Offers</a
+      >
+    </section>
+    <!-- coupon end -->
+    <!-- booking -->
+    <section
+      id="booking-form"
+      class="mt-8 pb-20 bg-slate-100 border-t-2 border-green-500 rounded-t-3xl"
+    >
+      <h2 class="text-center font-extrabold text-3xl mt-24">
+        Trackers Paribahan
+      </h2>
+      <p class="text-center text-slate-700 mb-14 mt-8">
+        Booking your bus tickets has never been easier! With Travel Trackers,
+        you can enjoy a seamless and convenient <br />booking experience from
+        start to finish. Simply enter your departure and destination details,
+        choose from a wide <br />selection of routes and schedules, select your
+        preferred seat, and securely complete your transaction in just a few
+        clicks
+      </p>
+      <div class="mx-auto max-w-7xl">
+        <!-- ticket view -->
+        <div class="bg-white flex rounded-3xl">
+          <div class="flex-1 m-6">
+            <!-- car -->
+            <div class="flex justify-between items-center mt-8">
+              <div class="flex">
+                <img src="images/bus-logo.png" alt="" class="mx-6" />
+                <div>
+                  <h3 class="font-bold text-2xl">Scania Paribahan</h3>
+                  <p class="font-medium text-slate-500">
+                    Coach-7202 ! AC_Business
+                  </p>
+                </div>
+              </div>
+              <div>
+                <a
+                  class="btn bg-green-100 text-green-500 font-bold border border-green-300"
+                  ><span><img src="images/seat-green.png" alt="" /></span>
+                  <span id="available-seat-data">40</span>
+                  Seats Left</a
+                >
+              </div>
+            </div>
+            <div class="bg-slate-100 p-6 mt-6 rounded-3xl">
+              <div
+                class="border-b-2 border-slate-300 border-dashed flex justify-between items-center pb-4"
+              >
+                <p class="text-slate-500 font-medium">Route</p>
+                <p class="font-semibold">Dhaka-Sylhet</p>
+              </div>
+              <div
+                class="border-b-2 border-slate-300 border-dashed flex justify-between items-center pb-4 mt-4"
+              >
+                <p class="text-slate-500 font-medium">Departure Time</p>
+                <p class="font-semibold">9:00 PM</p>
+              </div>
+              <div class="flex justify-between items-center pb-4 mt-9">
+                <p class="bg-slate-300 p-4 rounded-2xl font-medium">
+                  Boarding Point- Laxmipur
+                </p>
+                <p class="bg-slate-300 p-4 rounded-2xl font-medium">
+                  Dropping Point- Bogura
+                </p>
+                <p class="bg-slate-300 p-4 rounded-2xl font-medium">
+                  Est. Time- 11 Hour
+                </p>
+              </div>
+            </div>
+          </div>
+          <img src="images/info-devider.png" alt="" />
+          <div class="w-44 mr-8 flex flex-col justify-center items-center">
+            <img src="images/fare.png" alt="" />
+            <h3 class="font-extrabold text-2xl">550 Taka</h3>
+            <p class="font-medium text-lg">Per Seat</p>
+          </div>
+        </div>
+        <!-- selecting seats -->
+        <div class="">
+          <!-- left -->
+
+          <div class="bg-white flex mt-10 p-8 rounded-3xl">
+            <!-- seats -->
+            <!-- left -->
+            <div class="flex-1 mr-5">
+              <div class="border-b-2 border-dashed border-slate-300 pb-4">
+                <h3 class="text-xl font-bold">Select your Seat</h3>
+              </div>
+              <div
+                class="flex justify-between border-b-2 border-dashed border-slate-300 py-4"
+              >
+                <p class="flex font-medium">
+                  <span
+                    ><img
+                      class="pr-2"
+                      src="images/seat-gray.png"
+                      alt="" /></span
+                  >Available
+                </p>
+                <p class="flex font-medium">
+                  <span
+                    ><img
+                      class="pr-2"
+                      src="images/seat-green-filled.png"
+                      alt="" /></span
+                  >Selected
+                </p>
+              </div>
+              <!-- bus seats -->
+              <div class="">
+                <div class="pt-8 flex justify-end">
+                  <span
+                    class="h-12 flex justify-center items-center w-[100px] rounded-2xl bg-slate-300"
+                  >
+                    <img src="/images/steering-wheel.png" class="w-6 h-6" />
+                  </span>
+                </div>
+                <div class="flex gap-4 pt-8">
+                  <div class="grid gap-8 grid-cols-[60px]">
+                    <span class="h-12 flex justify-center items-center">A</span>
+                    <span class="h-12 flex justify-center items-center">B</span>
+                    <span class="h-12 flex justify-center items-center">C</span>
+                    <span class="h-12 flex justify-center items-center">D</span>
+                    <span class="h-12 flex justify-center items-center">E</span>
+                    <span class="h-12 flex justify-center items-center">F</span>
+                    <span class="h-12 flex justify-center items-center">G</span>
+                    <span class="h-12 flex justify-center items-center">H</span>
+                    <span class="h-12 flex justify-center items-center">I</span>
+                    <span class="h-12 flex justify-center items-center">J</span>
+                  </div>
+                  <div class="grid grid-cols-[100px_100px] gap-8">
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="A1"
+                    >
+                      A1
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="A2"
+                    >
+                      A2
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="B1"
+                    >
+                      B1
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="B2"
+                    >
+                      B2
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="C1"
+                    >
+                      C1
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="C2"
+                    >
+                      C2
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="D1"
+                    >
+                      D1
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="D2"
+                    >
+                      D2
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="E1"
+                    >
+                      E1
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="E2"
+                    >
+                      E2
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="F1"
+                    >
+                      F1
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="F2"
+                    >
+                      F2
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="G1"
+                    >
+                      G1
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="G2"
+                    >
+                      G2
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="H1"
+                    >
+                      H1
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="H2"
+                    >
+                      H2
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="I1"
+                    >
+                      I1
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="I2"
+                    >
+                      I2
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="J1"
+                    >
+                      J1
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="J2"
+                    >
+                      J2
+                    </button>
+                  </div>
+                  <div class="grid grid-cols-[100px_100px] gap-8 ml-14">
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="A3"
+                    >
+                      A3
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="A4"
+                    >
+                      A4
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="B3"
+                    >
+                      B3
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="B4"
+                    >
+                      B4
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="C3"
+                    >
+                      C3
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="C4"
+                    >
+                      C4
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="D3"
+                    >
+                      D3
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="D4"
+                    >
+                      D4
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="E3"
+                    >
+                      E3
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="E4"
+                    >
+                      E4
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="F3"
+                    >
+                      F3
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="F4"
+                    >
+                      F4
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="G3"
+                    >
+                      G3
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="G4"
+                    >
+                      G4
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="H3"
+                    >
+                      H3
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="H4"
+                    >
+                      H4
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="I3"
+                    >
+                      I3
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="I4"
+                    >
+                      I4
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="J3"
+                    >
+                      J3
+                    </button>
+                    <button
+                      type=""
+                      class="h-12 bg-slate-200 rounded-2xl seat-selector-btn"
+                      data-seat="J4"
+                    >
+                      J4
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- left end -->
+            <!-- select your seat form -->
+            <div class="flex-1 pl-5 border-l-2 border-dashed border-slate-200">
+              <div class="border-b-2 border-dashed border-slate-300 pb-4">
+                <h3 class="text-xl font-bold">Select your Seat</h3>
+              </div>
+              <div class="bg-slate-200 rounded-3xl my-8 px-8">
+                <div
+                  class="flex justify-evenly border-b-2 border-dashed border-slate-300 py-4"
+                >
+                  <p class="font-semibold text-lg">Seat</p>
+                  <p class="font-semibold text-lg">Class</p>
+                  <p class="font-semibold text-lg">Price</p>
+                </div>
+                <div id="seat-list">
+                  <!-- <div class="flex justify-evenly pt-4">
+                    <p class="font-medium">C2</p>
+                    <p class="font-medium">Economy</p>
+                    <p class="font-medium">550</p>
+                  </div> -->
+                </div>
+                <div
+                  class="flex justify-around my-8 border-t-2 border-slate-300"
+                >
+                  <p class="font-semibold text-lg mt-4">Total Price</p>
+                  <p class="font-semibold text-lg mt-4" id="total-price">
+                    BDT 00
+                  </p>
+                </div>
+                <div class="relative mx-6">
+                  <input
+                    id="coupon-input"
+                    type="text"
+                    placeholder="Have any coupon?"
+                    class="w-full p-6 rounded-3xl outline-none"
+                  />
+                  <button
+                    id="coupon-apply-btn"
+                    class="btn bg-green-500 text-white absolute right-0 top-1/2 -translate-y-1/2 mr-8"
+                  >
+                    Apply
+                  </button>
+                </div>
+                <div class="flex justify-around py-6">
+                  <p class="font-semibold text-lg">Grand Total</p>
+                  <p class="font-semibold text-lg" id="grand-price">BDT 00</p>
+                </div>
+              </div>
+              <div>
+                <h4 class="font-bold text-xl">Passenger Name*</h4>
+                <input
+                  type="text"
+                  placeholder="Enter your name"
+                  class="w-full p-6 rounded-3xl outline-none border my-6"
+                />
+              </div>
+              <div>
+                <h4 class="font-bold text-xl">Phone Number*</h4>
+                <input
+                  id="phone-number"
+                  type="number"
+                  placeholder="Enter your phone number"
+                  class="w-full p-6 rounded-3xl outline-none border my-6"
+                />
+              </div>
+              <div>
+                <h4 class="font-bold text-xl">Email ID</h4>
+                <input
+                  type="email"
+                  placeholder="Enter your email id"
+                  class="w-full p-6 rounded-3xl outline-none border my-6"
+                />
+              </div>
+              <div>
+                <button class="btn w-full bg-green-500 text-white rounded-2xl">
+                  Next
+                </button>
+              </div>
+              <div
+                class="underline flex justify-evenly font-semibold text-xl mt-4"
+              >
+                <a href="#">Terms and Conditions</a>
+                <a href="#">Cancellation Policy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- booking end -->
+    <!-- footer -->
+    <footer class="bg-black">
+      <div class="flex pb-20 pt-32 justify-around">
+        <div class="">
+          <h2 class="text-white mb-5 font-extrabold text-3xl">
+            Travel Trackers
+          </h2>
+          <p class="text-white font-semibold text-lg">
+            At <b>Travel Trackers</b>, we're passionate about providing seamless
+            travel experiences. <br />Our mission is to simplify the journey for
+            our customers, offering convenient booking options,<br />
+            reliable transportation services, and exceptional customer support
+            every step of the way.
+          </p>
+        </div>
+        <div>
+          <p class="text-white font-semibold text-lg mb-4">Download our app</p>
+          <div
+            class="flex items-center gap-4 border rounded-lg py-2 px-4 cursor-pointer"
+          >
+            <div>
+              <img src="images/playstore.png" alt="" />
+            </div>
+            <div>
+              <p class="text-white">GET IT ON</p>
+              <p class="text-white">Google Play</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="border border-dashed border-slate-700 w-3/4 mx-auto mb-10"
+      ></div>
+      <div class="flex justify-around">
+        <div>
+          <p class="text-white">
+            @all rights reserved, P-Ticket services limited.2024
+          </p>
+        </div>
+        <div class="text-white">
+          <a href="#">Terms & conditions</a
+          ><a href="#" class="mx-8">Return & refund policy</a
+          ><a href="#">Privacy policy</a>
+        </div>
+      </div>
+    </footer>
+    <script src="scripts/script.js"></script>
+    <script src="useDbugCss.js"></script>
+  </body>
+</html>
